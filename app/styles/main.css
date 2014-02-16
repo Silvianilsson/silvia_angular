@@ -19,7 +19,12 @@
   line-height: 40px;
   padding-bottom: 19px;
 }
-.text-muted {
+a.carousel-control, #icon-next {
+  width: 0px;
+  color: #777;
+}
+a.text-muted {
+  color: #777;
 }
 /* Custom page footer */
  .footer {
@@ -39,7 +44,7 @@
 /* Main marketing message and sign up button */
  .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 100px solid #e5e5e5;
 }
 .jumbotron .btn {
   font-size: 21px;

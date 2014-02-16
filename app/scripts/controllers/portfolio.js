@@ -10,19 +10,19 @@ angular.module('silviaApp')
     var datornsPoang = 0;
 
     function anvandarenVinner() {
-      var spelresultat = document.getElementById('spelresultat');
+      var spelresultat = angular.element('spelresultat');
       spelresultat.innerHTML = 'Vinst';
       anvandarensPoang += 1;
     }
 
     function datornVinner() {
-      var spelresultat = document.getElementById('spelresultat');
+      var spelresultat = angular.element('spelresultat');
       spelresultat.innerHTML = 'Förlust';
       datornsPoang += 1;
     }
 
     function lika() {
-      var spelresultat = document.getElementById('spelresultat');
+      var spelresultat = angular.element('spelresultat');
       spelresultat.innerHTML = 'lika';
     }
 
@@ -56,58 +56,58 @@ angular.module('silviaApp')
     function spela(anvandarensVal) {
       var slumptal = Math.floor((Math.random() * 3));
       var datornsVal = verktyg[slumptal];
-      var datornsValElement = document.getElementById('datornsVal');
+      var datornsValElement = angular.element('datornsVal');
       datornsValElement.innerHTML = datornsVal;
       bestamVinnare(anvandarensVal, datornsVal);
-      var anvandarensPoangElement = document.getElementById('användarens_poäng');
+      var anvandarensPoangElement = angular.element('anvandarens_poang');
       anvandarensPoangElement.innerHTML = anvandarensPoang;
-      var datornsPoangElement = document.getElementById('datorns_poäng');
+      var datornsPoangElement = angular.element('datorns_poang');
       datornsPoangElement.innerHTML = datornsPoang;
-      var slutresultat = document.getElementById('slutresultat');
+      var slutresultat = angular.element('slutresultat');
       if (anvandarensPoang === 3) {
         slutresultat.innerHTML = 'Grattis! Du vann över datorn med ' + (anvandarensPoang - datornsPoang) + 'poäng';
-        document.getElementById('Sten').disabled = true;
-        document.getElementById('Sax').disabled = true;
-        document.getElementById('Påse').disabled = true;
+        angular.element('Sten').disabled = true;
+        angular.element('Sax').disabled = true;
+        angular.element('Påse').disabled = true;
       } else if (datornsPoang === 3) {
         slutresultat.innerHTML = 'Tyvärr du förlorade! Datorn slog dig med ' + (datornsPoang - anvandarensPoang) + 'poäng';
-        document.getElementById('Sten').disabled = true;
-        document.getElementById('Sax').disabled = true;
-        document.getElementById('Påse').disabled = true;
+        angular.element('Sten').disabled = true;
+        angular.element('Sax').disabled = true;
+        angular.element('Påse').disabled = true;
       }
     }
-    var sten = document.getElementById('Sten');
-    sten.onclick = function (event) {
-      var anvandarensVal = document.getElementById('Användarens_val');
+    var sten = angular.element('Sten');
+    sten.onclick = function () {
+      var anvandarensVal = angular.element('Anvandarens_val');
       anvandarensVal.innerHTML = 'Sten';
       spela('Sten');
     };
-    var sax = document.getElementById('Sax');
-    sax.onclick = function (event) {
-      var anvandarensVal = document.getElementById('Användarens_val');
+    var sax = angular.element('Sax');
+    sax.onclick = function () {
+      var anvandarensVal = angular.element('Anvandarens_val');
       anvandarensVal.innerHTML = 'Sax';
       spela('Sax');
     };
-    var pase = document.getElementById('Påse');
-    pase.onclick = function (event) {
-      var anvandarensVal = document.getElementById('Användarens_val');
+    var pase = angular.element('Påse');
+    pase.onclick = function () {
+      var anvandarensVal = angular.element('Anvandarens_val');
       anvandarensVal.innerHTML = 'Påse';
       spela('Påse');
     };
 
-    var borjaOm = document.getElementById('börja_om');
-    borjaOm.onclick = function (event) {
+    var borjaOm = angular.element('borja_om');
+    borjaOm.onclick = function () {
       anvandarensPoang = 0;
       datornsPoang = 0;
-      document.getElementById('användarens_poäng').innerHTML = anvandarensPoang;
-      document.getElementById('datorns_poäng').innerHTML = datornsPoang;
-      document.getElementById('slutresultat').innerHTML = '';
-      document.getElementById('Sten').disabled = false;
-      document.getElementById('Sax').disabled = false;
-      document.getElementById('Påse').disabled = false;
-      document.getElementById('Användarens_val').innerHTML = '';
-      document.getElementById('datornsVal').innerHTML = '';
-      document.getElementById('spelresultat').innerHTML = '';
+      angular.element('anvandarens_poang').innerHTML = anvandarensPoang;
+      angular.element('datorns_poang').innerHTML = datornsPoang;
+      angular.element('slutresultat').innerHTML = '';
+      angular.element('Sten').disabled = false;
+      angular.element('Sax').disabled = false;
+      angular.element('Påse').disabled = false;
+      angular.element('Anvandarens_val').innerHTML = '';
+      angular.element('datornsVal').innerHTML = '';
+      angular.element('spelresultat').innerHTML = '';
     };
 
   });

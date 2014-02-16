@@ -4,7 +4,7 @@
     </li>
     <li><a ng-href="#/about">About</a>
     </li>
-    <li class="active"><a ng-href="#">Portfolio</a>
+    <li class="active"><a ng-href="#/portfolio">Portfolio</a>
     </li>
     <li><a ng-href="#/contact">Contact</a>
     </li>
@@ -19,29 +19,27 @@
   </h3>
 </div>
 
-
-
 <div class="jumbotron" ng-controller="PortfolioCtrl">
 
   <section class='spel'>
     <section class='sten'>
       <img src="images/sten_sax_pase.jpg" height="300" width="400" />
-      <h1 id="main-title">Sten, Påse, Sax</h1>
+      <h1 ng-class="main-title">Sten, Påse, Sax</h1>
       <p>Poäng:
-        <span id='användarens_poäng'>0</span>-
-        <span id='datorns_poäng'>0</span>
+        <span ng-class='anvandarens_poang'>0</span>-
+        <span ng-class='datorns_poang'>0</span>
       </p>
       <p>
-        <span id='Användarens_val'>{{ test }}</span>-
-        <span id='Datorns_val'></span>-
-        <span id='spelresultat'></span>
+        <span ng-class='Anvandarens_val'></span>-
+        <span ng-class='Datorns_val'></span>-
+        <span ng-class='spelresultat'></span>
       </p>
 
       <a class="btn btn-default" href="#" role="button">Sten</a>
       <button class="btn btn-default" type="submit">Sax</button>
       <input class="btn btn-default" type="button" value="Påse">
       <input class="btn btn-default" type="submit" value="Börja om">
-      <p id='slutresultat'></p>
+      <p ng-class='slutresultat'></p>
     </section>
   </section>
 
