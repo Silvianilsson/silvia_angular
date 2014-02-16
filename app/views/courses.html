@@ -1,1 +1,46 @@
-<p>This is the courses view.</p>
+<div class="jumbotron" ng-controller="CoursesCtrl">
+  <div class="row">
+    <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img src="images/ros.JPG" data-src="holder.js/100%x180">
+      </a>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="images/ros.JPG" data-src="holder.js/100%x180">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="images/ros.JPG" data-src="holder.js/100%x180">
+        </a>
+      </div>
+    </div>
+
+    <section class='spel'>
+      <section class='sten'>
+        <img src="images/sten_sax_pase.jpg" height="300" width="400" />
+        <h1 id="main-title">Sten, Påse, Sax</h1>
+        <p>Poäng:
+          <span id='användarens_poäng'>0</span>-
+          <span id='datorns_poäng'>0</span>
+        </p>
+        <p>
+          <span id='Användarens_val'>{{ test }}</span>-
+          <span id='Datorns_val'></span>-
+          <span id='spelresultat'></span>
+        </p>
+
+        <a class="btn btn-default" href="#" role="button">Sten</a>
+        <button class="btn btn-default" type="submit">Sax</button>
+        <input class="btn btn-default" type="button" value="Påse">
+        <input class="btn btn-default" type="submit" value="Börja om">
+        <p id='slutresultat'></p>
+      </section>
+    </section>
+
+  </div>
