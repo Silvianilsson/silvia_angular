@@ -6,7 +6,7 @@ angular.module('silviaApp')
     var slides = $scope.slides = [];
 
     slides.push({
-      image: 'images/vi.JPG',
+      image: 'images/solros.JPG',
       text: ['More', 'Extra', 'Lots of', 'Surplus'][slides.length % 4] + ' ' + ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
     });
 

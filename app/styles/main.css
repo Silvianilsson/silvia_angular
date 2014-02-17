@@ -26,6 +26,9 @@ a.carousel-control, #icon-next {
 a.text-muted {
   color: #777;
 }
+ol.carousel-indicators {
+  bottom: -50px;
+}
 /* Custom page footer */
  .footer {
   padding-top: 19px;
