@@ -23,7 +23,7 @@ a.carousel-control, #icon-next {
   width: 0px;
   color: #777;
 }
-a.text-muted {
+a.text-muted, a {
   color: #777;
 }
 ol.carousel-indicators {
