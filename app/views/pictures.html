@@ -20,19 +20,51 @@
 </div>
 
 <div class="jumbotron">
-  <div ng-controller="PicturesCtrl">
-    <div style="height: 300">
-      <carousel interval="myInterval">
-        <slide ng-repeat="slide in slides" active="slide.active">
-          <img ng-src="{{slide.image}}" style="margin:auto;">
-          <div class="carousel-caption">
-            <!-- <h4>{{$index}}</h4>
-            <p>{{slide.text}}</p> -->
-          </div>
-        </slide>
-      </carousel>
+
+  <body>
+
+    <div>
+
+      <input checked id="one" name="multiples" type="radio" value="1">
+      <label for="one">1</label>
+
+      <input id="two" name="multiples" type="radio" value="2">
+      <label for="two">2</label>
+
+      <input id="three" name="multiples" type="radio" value="3">
+      <label for="three">3</label>
+
+      <input id="four" name="multiples" type="radio" value="4">
+      <label for="four">4</label>
+
+      <input id="five" name="multiples" type="radio" value="5">
+      <label for="five">5</label>
+
+      <input id="six" name="multiples" type="radio" value="6">
+      <label for="six">6</label>
+
+      <input id="seven" name="multiples" type="radio" value="7">
+      <label for="seven">7</label>
+
+      <input id="eight" name="multiples" type="radio" value="8">
+      <label for="eight">8</label>
+
+      <div class="container">
+        <div class="carousel">
+          <img src="images/ros.JPG" alt="Landscape 1">
+          <img src="images/sille.JPG" alt="Landscape 2">
+          <img src="images/jag.JPG" alt="Landscape 3">
+          <img src="images/sille2.JPG" alt="Landscape 4">
+          <img src="images/solros.JPG" alt="Landscape 5">
+          <img src="images/6.jpg" alt="Landscape 6">
+          <img src="images/7.jpg" alt="Landscape 7">
+          <img src="images/8.jpg" alt="Landscape 8">
+        </div>
+      </div>
+
     </div>
-  </div>
+
+  </body>
 </div>
 
 <div class="footer">
