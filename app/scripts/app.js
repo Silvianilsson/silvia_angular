@@ -29,10 +29,6 @@ angular.module('silviaApp', [
         templateUrl: 'views/pictures.html',
         controller: 'PicturesCtrl'
       })
-      .when('/courses', {
-        templateUrl: 'views/courses.html',
-        controller: 'CoursesCtrl'
-      })
       .when('/links', {
         templateUrl: 'views/links.html',
         controller: 'LinksCtrl'
